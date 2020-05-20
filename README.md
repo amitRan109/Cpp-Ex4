@@ -3,9 +3,9 @@
 
 ## namespace WarGame :
 
-  Board: has soldiers list and enum of movements,constructor, operator overloading, move function and function that check if there's                soldiers on board.
+  Board: Has soldiers list and enum of movements,constructor, operator overloading, move function and function that check if there's                soldiers on board.
   
-  demoGame:has object of Board, constructor and function that starts game.
+  demoGame: Has object of Board, constructor and function that starts game.
  
 
 
@@ -18,17 +18,17 @@ inheritors:
   
   inheritors:
   
-   Foot commander: The commandr of the foot soldiers. has list of his soldiers, and function that act them all.
+   -Foot commander: The commandr of the foot soldiers. has list of his soldiers, and function that act them all.
     
   Sniper
   
   inheritors:
   
-   SniperCommander:The commandr of the snipers.has list of his soldiers, and function that act them all.
+   -SniperCommander:The commandr of the snipers.has list of his soldiers, and function that act them all.
     
   Paramedic
   
   inheritors:
   
-   ParamedicCommander:The commandr of the paramedics.has list of his soldiers, and function that act them all.
+   -ParamedicCommander:The commandr of the paramedics.has list of his soldiers, and function that act them all.
   
