@@ -1,7 +1,7 @@
 # War game
 
 
-# namespace *WarGame* :
+## namespace *WarGame* :
 
   Board: has soldiers list and enum of movements,constructor, operator overloading, move function and function that check if there's                soldiers on board.
   
@@ -9,7 +9,7 @@
  
 
 
-# *Soldier*: 
+## *Soldier*: 
 represents general soldier that has fields of gamer number, location on board, health points, and damage points.Also has act and move functions.
 inheritors:
   FootSoldier 
