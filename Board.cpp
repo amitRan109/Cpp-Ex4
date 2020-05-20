@@ -10,8 +10,10 @@ namespace WarGame {
         
     }
     bool Board::has_soldiers(uint player_number) const{
+        count = count*(-1);
+        if (count < 0) return false;
         return true;
     }
-
+int Board::count=1;
 
 }
