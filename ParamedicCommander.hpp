@@ -3,7 +3,7 @@
 class ParamedicCommander : public Paramedic {
     std::vector <std::vector<Soldier*>> soldiers;
 public:
-    ParamedicCommander (int g): Soldier(g,{0,0},150,20) {}
+    ParamedicCommander (int g): Soldier(g,{0,0},200,100) {}
     void act();
     void act_all();
 };
