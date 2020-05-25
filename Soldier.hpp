@@ -20,4 +20,5 @@ public:
     void set_heal (int damage){health_points-=damage;}
     int get_heal () {return health_points;}
     int get_damag (){return this->damage_per_activity;}
+    virtual ~Soldier(){}
 };
