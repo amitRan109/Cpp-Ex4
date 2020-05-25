@@ -21,60 +21,28 @@ namespace WarGame {
         switch (direction)
         {
         case Up:
-            if (sold->get_player() == 1){
-                i++;
-                if (i >= board[0].size() || board[i][j]) throw runtime_error("Err:move 5");
-                board[i-1][j] = nullptr;
-                board[i][j] = sold;
-            }
-            else {
-                i--;
-                if (i < 0 || board[i][j]) throw runtime_error("Err:move 6");
-                board[i+1][j] = nullptr;
-                board[i][j] = sold;
-            }
+            i++;
+            if (i >= board[0].size() || board[i][j]) throw runtime_error("Err:move 5");
+            board[i-1][j] = nullptr;
+            board[i][j] = sold;
             break;
         case Down:
-            if (sold->get_player() == 1){
-                i--;
-                if (i < 0 || board[i][j]) throw runtime_error("Err:move 7");
-                board[i+1][j] = nullptr;
-                board[i][j] = sold;
-            } 
-            else {
-                i++;
-                if (i >= board[0].size() || board[i][j]) throw runtime_error("Err:move 8");
-                board[i-1][j] = nullptr;
-                board[i][j] = sold;
-            }
+            i--;
+            if (i < 0 || board[i][j]) throw runtime_error("Err:move 7");
+            board[i+1][j] = nullptr;
+            board[i][j] = sold; 
             break;
         case Right:
-            if (sold->get_player() == 1){
-                j--;
-                if (j < 0 || board[i][j]) throw runtime_error("Err:move 9");
-                board[i][j+1] = nullptr;
-                board[i][j] = sold;
-            } 
-            else {
-                j++;
-                if (j >= board.size() || board[i][j]) throw runtime_error("Err:move 10");
-                board[i][j-1] = nullptr;
-                board[i][j] = sold;
-            }
+            j++;
+            if (j >= board.size() || board[i][j]) throw runtime_error("Err:move 10");
+            board[i][j-1] = nullptr;
+            board[i][j] = sold;
             break;
         case Left: 
-            if (sold->get_player() == 1){
-                j++;
-                if (j >= board.size() || board[i][j]) throw runtime_error("Err:move 11");
-                board[i][j-1] = nullptr;
-                board[i][j] = sold;
-            }
-            else {
-                j--;
-                if (j < 0 || board[i][j]) throw runtime_error("Err:move 12");
-                board[i][j+1] = nullptr;
-                board[i][j] = sold;
-            }
+            j--;
+            if (j < 0 || board[i][j]) throw runtime_error("Err:move 12");
+            board[i][j+1] = nullptr;
+            board[i][j] = sold;
             break;
         }
         sold->act(board,{i,j});
