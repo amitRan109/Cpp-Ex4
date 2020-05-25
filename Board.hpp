@@ -16,7 +16,6 @@ namespace WarGame {
 
 class Board {
   private:
-    static int count; //for part a
     std::vector <std::vector<Soldier*>> board;
   public:
     enum MoveDIR { Up, Down, Right, Left };
@@ -45,6 +44,12 @@ class Board {
 
     // returns true if the board contains one or more soldiers of the given player.
     bool has_soldiers(uint player_number) const;
+
+
+    //my add
+    void print();
+    Soldier* max_health (uint player_number);
+    std::pair<int,int> get_loc (Soldier* s);
 };
 
 }

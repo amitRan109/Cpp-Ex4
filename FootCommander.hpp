@@ -1,9 +1,9 @@
+#pragma once
 #include "FootSoldier.hpp"
 #include <vector>
 class FootCommander : public FootSoldier {
-    std::vector <std::vector<Soldier*>> soldiers;
 public:
-    FootCommander (int g): Soldier(g,{0,0},150,20) {}
-    void act();
-    void act_all();
+    FootCommander (int p): Soldier(p,150,20,15) {}
+    void act(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc);
+    void act_all(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc);
 };

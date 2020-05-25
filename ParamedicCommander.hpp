@@ -1,9 +1,9 @@
+#pragma once
 #include "Paramedic.hpp"
 #include <vector>
 class ParamedicCommander : public Paramedic {
-    std::vector <std::vector<Soldier*>> soldiers;
 public:
-    ParamedicCommander (int g): Soldier(g,{0,0},200,100) {}
-    void act();
-    void act_all();
+    ParamedicCommander (int p): Soldier(p,200,100,35) {}
+    void act(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc);
+    void act_all(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc);
 };

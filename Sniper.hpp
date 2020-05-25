@@ -1,11 +1,11 @@
+#pragma once
 #include "Soldier.hpp"
-using namespace std;
+#include <vector>
 
 class Sniper : public virtual Soldier {
     
 public:
-    Sniper (int g): Soldier(g,{0,0},100,50) {}
-    Sniper () : Soldier(0,{0,0},0,0) {}
-    void act();
-    void move(std::pair<int,int> loc);
+    Sniper (int p): Soldier(p,100,50,2) {}
+    Sniper () : Soldier(0,0,0,2) {}
+    void act(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc);
 };

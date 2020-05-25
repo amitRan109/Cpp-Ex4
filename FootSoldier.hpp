@@ -1,9 +1,10 @@
 #pragma once
 #include "Soldier.hpp"
+#include <vector>
 class FootSoldier : public virtual Soldier {
 public:
-    FootSoldier (int g): Soldier(g,{0,0},100,10) {}
-    FootSoldier():Soldier(0,{0,0},0,0){}
-    void act();
-    void move(std::pair<int,int> loc);
+    FootSoldier (int p): Soldier(p,100,10,1) {}
+    FootSoldier():Soldier(0,0,0,1){}
+    void act(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc);
+    double distance (std::pair<int,int> a,std::pair<int,int> b);
 };
