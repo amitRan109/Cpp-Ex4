@@ -1,4 +1,6 @@
 #include "SniperCommander.hpp"
+using namespace WarGame;
+
 void SniperCommander::act (std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc) {
     Sniper::act(board,my_loc);
     act_all(board,my_loc);

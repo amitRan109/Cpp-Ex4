@@ -1,4 +1,6 @@
 #include "Sniper.hpp"
+using namespace WarGame;
+
 void Sniper::act (std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc) {
     int max_health=0;
     Soldier* target= nullptr;

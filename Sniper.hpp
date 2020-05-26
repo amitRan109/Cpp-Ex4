@@ -2,6 +2,7 @@
 #include "Soldier.hpp"
 #include <vector>
 
+namespace WarGame{
 class Sniper : public virtual Soldier {
     
 public:
@@ -9,3 +10,4 @@ public:
     Sniper () : Soldier(0,0,0,2) {}
     void act(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc);
 };
+}

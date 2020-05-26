@@ -1,4 +1,6 @@
 #include "ParamedicCommander.hpp"
+using namespace WarGame;
+
 void ParamedicCommander::act(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc) {
     Paramedic::act(board,my_loc);
     act_all(board,my_loc);
