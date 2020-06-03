@@ -1,5 +1,4 @@
 #include "FootCommander.hpp"
-using namespace WarGame;
 void FootCommander::act(std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc) {
     FootSoldier::act(board,my_loc);
     act_all(board,my_loc );
