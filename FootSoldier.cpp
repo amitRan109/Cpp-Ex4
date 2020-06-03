@@ -1,7 +1,6 @@
 #include "FootSoldier.hpp"
 #include <limits>
 #include <cmath>
-using namespace WarGame;
 
 void FootSoldier::act (std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc ) {
     double min_dis = std::numeric_limits<double>::max();
