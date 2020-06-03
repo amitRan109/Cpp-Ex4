@@ -1,5 +1,4 @@
 #include "Paramedic.hpp"
-using namespace WarGame;
 
 void Paramedic::act (std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc) {
     int x = my_loc.first;
