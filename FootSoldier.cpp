@@ -1,6 +1,7 @@
 #include "FootSoldier.hpp"
 #include <limits>
 #include <cmath>
+using namespace WarGame;
 
 void FootSoldier::act (std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc ) {
     double min_dis = std::numeric_limits<double>::max();
@@ -17,7 +18,7 @@ void FootSoldier::act (std::vector <std::vector<Soldier*>> board,std::pair<int,i
             }
         }
     }
-    target->set_heal(this->get_damag());
+    if (target) target->set_heal(this->get_damag());
 }
 double FootSoldier::distance (std::pair<int,int> a,std::pair<int,int> b){
     int x1 = a.first; int y1 = a.second;

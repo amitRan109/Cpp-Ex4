@@ -1,6 +1,10 @@
 #pragma once
 #include <stdexcept>
 #include <vector>
+#include <iostream>
+using namespace std;
+
+namespace WarGame{
 class Soldier {
     const int player_num; //the gamer num
     int health_points;
@@ -11,6 +15,7 @@ class Soldier {
     //3-paramedic 35-paramedicCommander
 
 public:
+Soldier (int p):player_num(p),health_points(0),damage_per_activity(0),max_health(0),type(0){}
     Soldier(int p,int h,int d,int t)
         :player_num(p),health_points(h),damage_per_activity(d),max_health(h),type(t){} 
     virtual void act (std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc) {};
@@ -22,3 +27,4 @@ public:
     int get_damag (){return this->damage_per_activity;}
     virtual ~Soldier(){}
 };
+}

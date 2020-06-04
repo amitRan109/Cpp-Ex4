@@ -1,6 +1,8 @@
 #pragma once
 #include "Soldier.hpp"
 #include <vector>
+using namespace WarGame;
+
 
 class Paramedic : public virtual Soldier {
 public:

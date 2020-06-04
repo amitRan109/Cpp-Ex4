@@ -1,4 +1,5 @@
 #include "Sniper.hpp"
+using namespace WarGame;
 
 void Sniper::act (std::vector <std::vector<Soldier*>> board,std::pair<int,int> my_loc) {
     int max_health=0;
@@ -15,5 +16,5 @@ void Sniper::act (std::vector <std::vector<Soldier*>> board,std::pair<int,int> m
 
         }
     }
-    target->set_heal(this->get_damag());
+    if (target) target->set_heal(this->get_damag());
 }

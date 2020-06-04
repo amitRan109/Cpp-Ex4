@@ -14,7 +14,7 @@ namespace WarGame {
         int i=source.first;
         int j=source.second;
         if (i < 0 || j < 0) throw runtime_error("Err:move 1");
-        if (i > board[0].size() || j > board.size()) throw runtime_error("Err:move 2");
+        if (i >= board[0].size() || j >= board.size()) throw runtime_error("Err:move 2");
         Soldier* sold = board[i][j];
         if (sold==nullptr) throw runtime_error("Err:move 3");
         if (sold->get_player()!=player_number)throw runtime_error("Err:move 4");
@@ -30,7 +30,7 @@ namespace WarGame {
             i--;
             if (i < 0 || board[i][j]) throw runtime_error("Err:move 7");
             board[i+1][j] = nullptr;
-            board[i][j] = sold; 
+            board[i][j] = sold;
             break;
         case Right:
             j++;
@@ -67,11 +67,13 @@ namespace WarGame {
     void Board::print(){
         for (int i=0; i<board.size(); i++){
             for (int j=0; j<board[0].size(); j++){
-                if (board[i][j] == nullptr) cout<<"0"<<" ";
-                else cout<<board[i][j]->get_player()<<"-"<<board[i][j]->get_heal()<<" ";
+                Soldier* temp= board[i][j];
+                if (temp == nullptr) cout<<"0"<<" ";
+                else cout<<temp->get_player()<<"-"<<temp->get_type()<<" ";
             }
             cout << " " << endl;
         }
+        cout << " " << endl;
     }
     
     Soldier* Board::max_health (uint player_number){

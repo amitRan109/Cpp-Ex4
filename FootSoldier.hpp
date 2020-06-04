@@ -1,6 +1,8 @@
 #pragma once
 #include "Soldier.hpp"
 #include <vector>
+using namespace WarGame;
+
 class FootSoldier : public virtual Soldier {
 public:
     FootSoldier (int p): Soldier(p,100,10,1) {}
